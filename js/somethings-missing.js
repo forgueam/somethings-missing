@@ -37,5 +37,8 @@ function getRandomColor() {
 }
 
 function toggleIcon(e) {
-    $(this).find('i').toggleClass('blurry');
+    //$(this).find('i').toggleClass('blurry');
+    $(this).find('i').css('visibility', function(i, visibility) {
+        return (visibility == 'visible') ? 'hidden' : 'visible';
+    });
 }
